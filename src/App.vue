@@ -1,19 +1,10 @@
 
 <template>
-  <!-- <home-vue /> -->
-  <product-vue />
+  <router-view></router-view>
 </template>
 
 <script>
-import HomeVue from "./pages/Home.vue";
-import ProductVue from "./pages/Product.vue";
-
-export default {
-  components: {
-    HomeVue,
-    ProductVue,
-  },
-};
+export default {};
 </script>
 
 <style>

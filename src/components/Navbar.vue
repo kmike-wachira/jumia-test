@@ -1,7 +1,7 @@
 <template>
   <div class="navbar bg-base-100 justify-around shadow-md fixed z-[1000]">
-    <div class="bg-red-200">
-      <a class="btn btn-ghost normal-case text-xl">Jumia test</a>
+    <div class="">
+      <router-link to="/" class="btn btn-ghost normal-case text-xl text-black">Home</router-link>
     </div>
     <div class="gap-4">
       <div class="form-control w-64">

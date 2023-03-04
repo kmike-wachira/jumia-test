@@ -19,7 +19,8 @@
           </div>
           <div class="md:7/12 lg:w-1/2">
             <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">
-              Nuxt development is carried out by passionate developers
+              Nuxt development is carried out by passionate
+              {{ $route.params.id }}
             </h2>
             <p class="my-8 text-gray-600 dark:text-gray-300">
               Nobis minus voluptatibus pariatur dignissimos libero quaerat iure
