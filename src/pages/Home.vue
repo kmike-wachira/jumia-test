@@ -23,6 +23,14 @@ import NavbarVue from "../components/Navbar.vue";
 import ProductlistingVue from "../components/Productlisting.vue";
 export default {
   components: { NavbarVue, MenuVue, ProductlistingVue },
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  methods:{
+    
+  }
 };
 </script>
 

@@ -2,20 +2,22 @@
   <div class="card w-96 bg-base-100 shadow-xl my-2">
     <figure>
       <img
-        src="assets/laptop.png"
+        :src="product.img"
         class="h-40 hover:scale-110 transition-all"
         alt="Laptop"
       />
     </figure>
     <div class="card-body">
       <h2 class="card-title">
-        Laptop
-        <div class="badge badge-secondary">ksh 1449</div>
+        {{ product.product_name }}
+        <div class="badge badge-secondary">ksh {{ product.price }}</div>
       </h2>
-      <p>If a dog chews shoes whose shoes does he choose?</p>
+      <p>{{ product.desc }}</p>
       <div class="card-actions justify-center">
         <a class="badge badge-outline">Add to cart</a>
-        <router-link :to="/product/" class="badge badge-outline"
+        <router-link
+          :to="`/product/${product.itemid}`"
+          class="badge badge-outline"
           >View product</router-link
         >
       </div>
@@ -24,7 +26,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["product"],
+};
 </script>
 
 <style>
