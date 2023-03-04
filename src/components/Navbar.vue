@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-base-100 justify-around shadow-md">
+  <div class="navbar bg-base-100 justify-around shadow-md fixed z-[1000]">
     <div class="bg-red-200">
       <a class="btn btn-ghost normal-case text-xl">Jumia test</a>
     </div>
