@@ -2,7 +2,7 @@
   <div class="card w-96 bg-base-100 shadow-xl my-2">
     <figure>
       <img
-        :src="product.img"
+        :src="`http://127.0.0.1:8000${product.product_image}`"
         class="h-40 hover:scale-110 transition-all"
         alt="Laptop"
       />
@@ -12,12 +12,10 @@
         {{ product.product_name }}
         <div class="badge badge-secondary">ksh {{ product.price }}</div>
       </h2>
-      <p>{{ product.desc }}</p>
+      <p>{{ product.product_desc }}</p>
       <div class="card-actions justify-center">
         <a class="badge badge-outline">Add to cart</a>
-        <router-link
-          :to="`/product/${product.itemid}`"
-          class="badge badge-outline"
+        <router-link :to="`/product/${product.id}`" class="badge badge-outline"
           >View product</router-link
         >
       </div>

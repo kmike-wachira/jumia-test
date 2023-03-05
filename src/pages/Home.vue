@@ -25,12 +25,20 @@ export default {
   components: { NavbarVue, MenuVue, ProductlistingVue },
   data() {
     return {
-      count: 0,
+      data: [],
     };
   },
-  methods:{
-    
-  }
+  methods: {
+    async fetchdata() {
+      await this.$forceUpdateaxios
+        .get("http://127.0.0.1:8000/api/products")
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    },
+  },
+  created() {
+    this.fetchdata();
+  },
 };
 </script>
 
