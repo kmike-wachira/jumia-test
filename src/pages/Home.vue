@@ -9,7 +9,7 @@
       </div>
       <div class="flex-1 text-center h-[100%] bg-red-400 h-full">
         <div class="flex container justify-center">
-          <img src="assets/laptop.png" alt="" class="" srcset="" />
+          <img src="../assets/laptop.png" alt="" class="" srcset="" />
         </div>
       </div>
     </section>
@@ -52,5 +52,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

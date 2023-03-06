@@ -3,15 +3,9 @@
     class="fixed top-0 z-10 ml-[-100%] flex h-screen w-full flex-col justify-between border-r bg-white px-6 pb-3 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%] dark:bg-gray-800 dark:border-gray-700"
   >
     <div>
-      <!-- <div class="-mx-6 px-6 py-4">
-        <a href="#" title="home">
-          <img src="assets/laptop.png" class="w-32" alt="tailus logo" />
-        </a>
-      </div> -->
-
       <div class="mt-8 text-center">
         <img
-          src="assets/laptop.png"
+          src="../assets/laptop.png"
           alt=""
           class="m-auto h-10 w-10 rounded-full object-cover lg:h-28 lg:w-28"
         />
@@ -69,8 +63,7 @@
                 d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z"
               />
             </svg>
-            <span
-              class="group-hover:text-gray-700 dark:group-hover:text-gray-50"
+            <span class="group-hover:text-gray-700 dark:group-hover:text-gray-50"
               >Categories</span
             >
           </a>
@@ -97,8 +90,7 @@
                 d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"
               />
             </svg>
-            <span
-              class="group-hover:text-gray-700 dark:group-hover:text-gray-50"
+            <span class="group-hover:text-gray-700 dark:group-hover:text-gray-50"
               >Reports</span
             >
           </a>
@@ -123,8 +115,7 @@
                 d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"
               />
             </svg>
-            <span
-              class="group-hover:text-gray-700 dark:group-hover:text-gray-50"
+            <span class="group-hover:text-gray-700 dark:group-hover:text-gray-50"
               >Other data</span
             >
           </a>
@@ -191,5 +182,4 @@
 export default {};
 </script>
 
-<style>
-</style>
+<style></style>
