@@ -56,7 +56,7 @@ export default {
   methods: {
     async getProduct(id) {
       await axios
-        .get(`http://127.0.0.1:8000/api/products/${id}`)
+        .get(`http://mike.mgihub.com/api/products/${id}`)
         .then((res) => (this.product = res.data))
         .catch((err) => console.log(err));
     },

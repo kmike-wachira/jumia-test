@@ -103,21 +103,14 @@ export default {
     };
   },
   methods: {
-    async fetchdata() {
-      await axios
-        .get("http://127.0.0.1:8000/api/products")
-        .then((res) => res.json())
-        .catch((err) => console.log(err));
-    },
     async fetchCategories() {
       await axios
-        .get("http://127.0.0.1:8000/api/categories")
+        .get("http://mike.mgihub.com/api/categories")
         .then((res) => (this.categories = res.data))
         .catch((err) => console.log(err));
     },
   },
   created() {
-    this.fetchdata();
     this.fetchCategories();
   },
 };
