@@ -1,23 +1,26 @@
 <template>
-  <div>
+  <div class="">
     <navbar-vue></navbar-vue>
   </div>
-  <main class="z-[10] pt-2">
-    <section>
-      <div class="m-auto text-gray-600 mt-16" v-if="product">
+
+  <section>
+    <div class="flex mx-2 gap-2 z-[10] pt-2">
+      <div class="flex-1 m-auto text-gray-600 mt-16 card" v-if="product">
         <div
-          class="space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center p-12"
+          class="space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center p-12 shadow-sm"
         >
           <div class="md:5/12 lg:w-1/2">
             <img
-              :src="`http://127.0.0.1:8000${product.product_image}`"
+              :src="`http://mike.mgihub.com${product.product_image}`"
               alt="image"
               loading="lazy"
               width=""
               height=""
             />
           </div>
-          <div class="md:7/12 lg:w-1/2">
+          <div
+            class="md:7/12 lg:w-1/2 flex flex-col justify-start items-start bg-red-300 h-full"
+          >
             <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">
               {{ product.product_name }}
             </h2>
@@ -39,8 +42,15 @@
           </div>
         </div>
       </div>
-    </section>
-  </main>
+      <div class="flex-none w-96 h-100 mt-16">
+        <div class="flex flex-col">
+          <h2 class="font-semibold font-mono">DELIVERY & RETURNS</h2>
+          <div class="divider m-0"></div>
+          <p class="alert alert-info p-2 rounded-sm">Simple locator</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -67,5 +77,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

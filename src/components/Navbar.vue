@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar bg-base-100 shadow-sm fixed z-[1000] md:flex md:justify-around">
+  <div class="navbar bg-base-100 shadow-sm fixed z-[1000] md:flex md:justify-around bg-gray-100">
     <div class="navbar-start md:hidden">
       <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl">Jumia 🛒</a>
+      <router-link to="/" class="btn btn-ghost normal-case text-xl">Jumia 🛒</router-link>
     </div>
     <div class="navbar-end">
       <button class="btn btn-ghost btn-circle">
@@ -89,7 +89,7 @@ export default {
   methods: {
     async fetchCategories() {
       await axios
-        .get("http://127.0.0.1:8000/api/categories")
+        .get("http://mike.mgihub.com/api/categories")
         .then((res) => (this.categories = res.data))
         .catch((err) => console.log(err));
     },
