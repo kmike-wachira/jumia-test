@@ -27,7 +27,7 @@ export default {
   methods: {
     async fetchData() {
       await axios
-        .get("http://127.0.0.1:8000/api/products")
+        .get("http://jumia-test.mgihub.com/api/products")
         .then((response) => (this.productslist = response.data))
         .catch((err) => console.log(err));
     },

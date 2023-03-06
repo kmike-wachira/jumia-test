@@ -10,7 +10,7 @@
         >
           <div class="md:5/12 lg:w-1/2">
             <img
-              :src="`http://127.0.0.1:8000${product.product_image}`"
+              :src="`http://jumia-test.mgihub.com${product.product_image}`"
               alt="image"
               loading="lazy"
               width=""
@@ -56,7 +56,7 @@ export default {
   methods: {
     async getProduct(id) {
       await axios
-        .get(`http://127.0.0.1:8000/api/products/${id}`)
+        .get(`http://jumia-test.mgihub.com/api/products/${id}`)
         .then((res) => (this.product = res.data))
         .catch((err) => console.log(err));
     },
