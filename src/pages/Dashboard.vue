@@ -212,7 +212,7 @@ export default {
     },
     async getCategories() {
       await axios
-        .get("http://jumia-test.mgihub.com/api/categories/")
+        .get("http://mike.mgihub.com/api/categories/")
         .then((res) => (this.category = res.data))
         .catch((err) => console.log(err));
     },
@@ -231,7 +231,7 @@ export default {
       formdata.append("price", this.price);
 
       await axios
-        .post("http://jumia-test.mgihub.com/api/products/", formdata)
+        .post("http://mike.mgihub.com/api/products/", formdata)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     },

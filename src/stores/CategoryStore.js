@@ -9,7 +9,7 @@ export const useCategoryStore = defineStore('categoryStore', {
     actions: {
         async fetchCategories() {
             await axios
-                .get("http://jumia-test.mgihub.com/api/categories")
+                .get("http://mike.mgihub.com/api/categories")
                 .then((res) => (this.categories = res.data))
                 .catch((err) => console.log(err));
         },
