@@ -3,12 +3,12 @@
     <navbar-vue />
   </div>
   <main class="z-[10] pt-2">
-    <section class="flex mt-16 gap-4 h-[100%]">
+    <section class="flex mt-16 gap-2 h-[100%]">
       <div class="flex-none z-0 hidden md:block">
         <menu-vue :categories="categories" />
       </div>
       <div class="flex-1 text-center h-[100%] bg-red-400 h-full">
-        <div class="flex justify-center">
+        <div class="flex container justify-center">
           <img src="assets/laptop.png" alt="" class="" srcset="" />
         </div>
       </div>
@@ -36,13 +36,13 @@ export default {
       await axios
         .get("http://127.0.0.1:8000/api/products")
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .catch((err) => console.log(err));
     },
     async fetchCategories() {
       await axios
         .get("http://127.0.0.1:8000/api/categories")
         .then((res) => (this.categories = res.data))
-        .then((data) => console.log(data));
+        .catch((err) => console.log(err));
     },
   },
   created() {

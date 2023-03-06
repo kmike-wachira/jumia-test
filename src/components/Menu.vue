@@ -1,7 +1,11 @@
 <template>
-  <div class="card w-64 h-75 bg-base-100 shadow-sm">
+  <div class="card w-64 h-75 bg-gray-300 shadow-sm">
     <ul class="menu bg-base-100">
-      <li v-for="category in categories" :key="category.id"><a>{{category.category_name}}</a></li>
+      <li><router-link to="/dashboard"> ⚓  Dashboard</router-link></li>
+
+      <li v-for="category in categories" :key="category.id">
+        <a> ⚓ {{ category.category_name }}</a>
+      </li>
     </ul>
   </div>
 </template>
