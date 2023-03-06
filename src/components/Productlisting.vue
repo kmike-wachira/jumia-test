@@ -3,7 +3,7 @@
     <h3 class="text-2xl font-mono border-l-4 pl-2 bg-red-200 p-1 font-semibold">
       {{ cat_name }}
     </h3>
-    <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-2">
+    <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-2 px-2">
       <div v-if="!productslist">looading</div>
       <single-product-vue
         v-for="(product, index) in productslist"

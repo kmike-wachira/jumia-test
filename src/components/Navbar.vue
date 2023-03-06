@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="navbar bg-base-100 shadow-sm fixed z-[1000] md:flex md:justify-around"
-  >
+  <div class="navbar bg-base-100 shadow-sm fixed z-[1000] md:flex md:justify-around">
     <div class="navbar-start md:hidden">
       <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -22,7 +20,7 @@
         </label>
         <ul
           tabindex="0"
-          class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+          class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-sm w-52"
         >
           <li><router-link to="/dashboard"> Dashboard</router-link></li>
           <li v-for="category in categories" :key="category.id">
@@ -75,6 +73,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -95,5 +94,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -15,9 +15,60 @@
       <div class="flex-none z-0 hidden md:block w-64 my-4 w-100">
         <div class="flex flex-col justify-between gap-2">
           <div class="card shadow-sm p-2 rounded-sm shadow-sm">
-            1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi repellat
-            dicta numquam illo voluptatibus dignissimos corrupti porro distinctio quos.
-            Nesciunt alias ab sunt fugit nemo nostrum quibusdam labore earum eligendi.
+            <div class="alert alert-success shadow-lg my-1">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="stroke-current flex-shrink-0 h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>Secure transaction</span>
+              </div>
+            </div>
+            <div class="alert alert-success shadow-lg my-1">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="stroke-current flex-shrink-0 h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>Fast in delivery</span>
+              </div>
+            </div>
+            <div class="alert alert-success shadow-lg my-1">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="stroke-current flex-shrink-0 h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>Great Customer Service</span>
+              </div>
+            </div>
           </div>
           <div class="card shadow-sm p-2 rounded-sm bg-red-400">
             <img src="../assets/laptop.png" alt="" class="" srcset="" />
