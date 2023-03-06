@@ -25,8 +25,8 @@ export default {
     };
   },
   methods: {
-    fetchData() {
-      axios
+    async fetchData() {
+      await axios
         .get("http://127.0.0.1:8000/api/products")
         .then((response) => (this.productslist = response.data))
         .catch((err) => console.log(err));

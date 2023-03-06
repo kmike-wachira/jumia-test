@@ -4,7 +4,9 @@
   </div>
   <main class="z-[10] pt-2">
     <section class="flex mt-16 gap-4 h-[100%]">
-      <div class="flex-none z-0 hidden md:block"><menu-vue /></div>
+      <div class="flex-none z-0 hidden md:block">
+        <menu-vue :categories="categories" />
+      </div>
       <div class="flex-1 text-center h-[100%] bg-red-400 h-full">
         <div class="flex justify-center">
           <img src="assets/laptop.png" alt="" class="" srcset="" />
@@ -18,6 +20,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import MenuVue from "../components/Menu.vue";
 import NavbarVue from "../components/Navbar.vue";
 import ProductlistingVue from "../components/Productlisting.vue";
@@ -25,19 +28,26 @@ export default {
   components: { NavbarVue, MenuVue, ProductlistingVue },
   data() {
     return {
-      data: [],
+      categories: [],
     };
   },
   methods: {
     async fetchdata() {
-      await this.$forceUpdateaxios
+      await axios
         .get("http://127.0.0.1:8000/api/products")
         .then((res) => res.json())
+        .then((data) => console.log(data));
+    },
+    async fetchCategories() {
+      await axios
+        .get("http://127.0.0.1:8000/api/categories")
+        .then((res) => (this.categories = res.data))
         .then((data) => console.log(data));
     },
   },
   created() {
     this.fetchdata();
+    this.fetchCategories();
   },
 };
 </script>
