@@ -1,6 +1,6 @@
 <template>
   <section class="m-3 card shadow-md rounded-xl">
-    <div class="text-1xl font-semibold w-full bg-red-200 p-2 ont-mono border-l-4">
+    <div class="text-2xl font-semibold w-full bg-red-200 p-2 font-mono border-l-4">
       Categories
     </div>
 

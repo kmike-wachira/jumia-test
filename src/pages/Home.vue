@@ -27,8 +27,13 @@
     </section>
     <!-- categories section -->
     <category-list></category-list>
+    <!-- top  products -->
     <section class="z-0">
-      <productlisting-vue />
+      <productlisting-vue cat_name="Top Products" />
+    </section>
+    <!-- recent products -->
+    <section class="z-0 bg-gray-100 p-2">
+      <productlisting-vue cat_name="Featured Products" />
     </section>
   </main>
 </template>

@@ -1,5 +1,7 @@
 <template>
-  <div class="card w-96 bg-base-100 shadow-xl my-2">
+  <div
+    class="card md:w-64 bg-base-100 hover:shadow-xl transition-all my-2 text-center border"
+  >
     <figure>
       <img
         :src="`http://127.0.0.1:8000${product.product_image}`"
@@ -7,16 +9,17 @@
         alt="Laptop"
       />
     </figure>
-    <div class="card-body">
-      <h2 class="card-title">
+    <div class="card-body p-1">
+      <h2 class="font-2xl font-mono font-semibold">
         {{ product.product_name }}
-        <div class="badge badge-secondary">ksh {{ product.price }}</div>
+        <!-- <div class="badge badge-secondary">ksh {{ product.price }}</div> -->
       </h2>
       <p>{{ product.product_desc }}</p>
       <div class="card-actions justify-center">
-        <a class="badge badge-outline">Add to cart</a>
-        <router-link :to="`/product/${product.id}`" class="badge badge-outline"
-          >View product</router-link
+        <router-link
+          :to="`/product/${product.id}`"
+          class="btn btn-outline btn-warning p-0 px-2 h-4"
+          >Add to cart</router-link
         >
       </div>
     </div>
@@ -29,5 +32,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
