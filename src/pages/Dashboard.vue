@@ -5,13 +5,8 @@
       <div
         class="sticky top-0 h-16 border-b bg-white dark:bg-gray-800 dark:border-gray-700 lg:py-2.5"
       >
-        <div
-          class="flex items-center justify-between space-x-4 px-6 2xl:container"
-        >
-          <h5
-            hidden
-            class="text-2xl font-medium text-gray-600 lg:block dark:text-white"
-          >
+        <div class="flex items-center justify-between space-x-4 px-6 2xl:container">
+          <h5 hidden class="text-2xl font-medium text-gray-600 lg:block dark:text-white">
             Dashboard
           </h5>
           <button
@@ -37,10 +32,7 @@
 
       <div class="px-6 pt-6 2xl:container">
         <div class="">
-          <form
-            @submit.prevent="saveProduct"
-            class="w-full max-w-lg mx-auto p-12 m-12"
-          >
+          <form @submit.prevent="saveProduct" class="w-full max-w-lg mx-auto p-12 m-12">
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full px-3">
                 <label
@@ -131,7 +123,7 @@
                     id="grid-state"
                     v-model="category_id"
                   >
-                    <option :value="{}" v-for="cat in category" :key="cat.id">
+                    <option v-for="cat in categories" :key="cat.id" :value="cat.id">
                       {{ cat.category_name }}
                     </option>
                   </select>
@@ -202,7 +194,7 @@ export default {
       product_short_desc: null,
       product_desc: null,
       category_id: null,
-      category: [],
+      categories: [],
     };
   },
 
@@ -212,18 +204,14 @@ export default {
     },
     async getCategories() {
       await axios
-        .get("http://mike.mgihub.com/api/categories/")
-        .then((res) => (this.category = res.data))
+        .get("http://127.0.0.1:8000/api/categories/")
+        .then((res) => (this.categories = res.data))
         .catch((err) => console.log(err));
     },
 
     async saveProduct() {
       const formdata = new FormData();
-      formdata.append(
-        "product_image",
-        this.product_image,
-        this.product_image.name
-      );
+      formdata.append("product_image", this.product_image, this.product_image.name);
       formdata.append("product_name", this.product_name);
       formdata.append("product_desc", this.product_desc);
       formdata.append("product_short_desc", this.product_short_desc);
@@ -231,16 +219,15 @@ export default {
       formdata.append("price", this.price);
 
       await axios
-        .post("http://mike.mgihub.com/api/products/", formdata)
+        .post("http://127.0.0.1:8000/api/products/", formdata)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     },
   },
-  created() {
+  mounted() {
     this.getCategories();
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -2,7 +2,7 @@
   <div class="card w-96 bg-base-100 shadow-xl my-2">
     <figure>
       <img
-        :src="`http://mike.mgihub.com${product.product_image}`"
+        :src="`http://127.0.0.1:8000${product.product_image}`"
         class="h-40 hover:scale-110 transition-all"
         alt="Laptop"
       />
