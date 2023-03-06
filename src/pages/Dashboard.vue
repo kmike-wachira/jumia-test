@@ -131,7 +131,9 @@
                     id="grid-state"
                     v-model="category_id"
                   >
-                    <option value="1">New Mexico</option>
+                    <option :value="{}" v-for="cat in category" :key="cat.id">
+                      {{ cat.category_name }}
+                    </option>
                   </select>
                   <div
                     class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
@@ -200,12 +202,21 @@ export default {
       product_short_desc: null,
       product_desc: null,
       category_id: null,
+      category: [],
     };
   },
+
   methods: {
     onFileupload(event) {
       this.product_image = event.target.files[0];
     },
+    async getCategories() {
+      await axios
+        .get("http://127.0.0.1:8000/api/categories/")
+        .then((res) => (this.category = res.data))
+        .catch((err) => console.log(err));
+    },
+
     async saveProduct() {
       const formdata = new FormData();
       formdata.append(
@@ -224,6 +235,9 @@ export default {
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     },
+  },
+  created() {
+    this.getCategories();
   },
 };
 </script>
