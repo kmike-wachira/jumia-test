@@ -18,7 +18,7 @@
         <h5
           class="mt-4 hidden text-xl font-semibold text-gray-600 lg:block dark:text-gray-300"
         >
-          Cynthia J. Watts
+          Kmike
         </h5>
         <span class="hidden text-gray-400 lg:block">Admin</span>
       </div>
@@ -179,9 +179,9 @@
             d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
           />
         </svg>
-        <span class="group-hover:text-gray-700 dark:group-hover:text-white"
-          >Logout</span
-        >
+        <span class="group-hover:text-gray-700 dark:group-hover:text-white">
+          <router-link to="/">Logout</router-link>
+        </span>
       </button>
     </div>
   </aside>
