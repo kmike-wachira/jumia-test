@@ -202,15 +202,12 @@ export default {
     onFileupload(event) {
       this.product_image = event.target.files[0];
     },
-    async getCategories() {
+    async fetchCategories() {
       await axios
-        .get("https://mike.mgihub.com/api/categories/", {
-          headers: { "Access-Control-Allow-Credentials": true },
-        })
+        .get("https://mike.mgihub.com/api/categories")
         .then((res) => (this.categories = res.data))
         .catch((err) => console.log(err));
     },
-
     async saveProduct() {
       const formdata = new FormData();
       formdata.append("product_image", this.product_image, this.product_image.name);
@@ -227,7 +224,7 @@ export default {
     },
   },
   created() {
-    this.getCategories();
+    this.fetchCategories();
   },
 };
 </script>
