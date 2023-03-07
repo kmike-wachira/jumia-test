@@ -21,13 +21,15 @@
           <div class="md:7/12 lg:w-1/2 flex flex-col justify-start items-start h-full">
             <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">
               {{ product.product_name }}
+              <span class="badge text-xl bg-blue-900 p-4">  Ksh{{ product.price }}</span>
             </h2>
-            <p class="my-1 text-gray-600 dark:text-gray-300">
+            <p class="my-2 text-gray-600 dark:text-gray-300">
               {{ product.product_short_desc }}
             </p>
-            <p class="my-1 text-gray-600 dark:text-gray-300">
+            <p class="my-2 text-gray-600 dark:text-gray-300">
               {{ product.product_desc }}
             </p>
+            <p class="my-2 text-gray-600 dark:text-gray-300"></p>
             <a
               href=""
               class="relative flex h-8 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-sky-100 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
@@ -44,7 +46,24 @@
         <div class="flex flex-col">
           <h2 class="font-semibold font-mono">DELIVERY & RETURNS</h2>
           <div class="divider m-0"></div>
-          <p class="alert alert-info p-2 rounded-sm">Simple locator</p>
+          <p class="alert p-2 rounded-sm">Simple locator</p>
+          <div class="divider m-0"></div>
+          <p class="alert p-2 rounded-sm">
+            Door Delivery Details <br />
+            Delivery KSh 250 Delivery by 10 March when you order within next 5hrs 31mins
+          </p>
+          <div class="divider m-0"></div>
+          <p class="alert p-2 rounded-sm">
+            Pickup Station <br />
+            Details Delivery KSh 166 Available for pick up from 10 March when you order
+            within the next 5hrs 31mins
+          </p>
+          <div class="divider m-0"></div>
+          <p class="alert p-2 rounded-sm">Return Policy Easy Return, Quick Refund</p>
+          <div class="divider m-0"></div>
+          <p class="alert p-2 rounded-sm">Simple locator</p>
+          <div class="divider m-0"></div>
+          <p class="alert p-2 rounded-sm">Simple locator</p>
         </div>
       </div>
     </div>
