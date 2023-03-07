@@ -205,7 +205,7 @@ export default {
     async getCategories() {
       await axios
         .get("https://mike.mgihub.com/api/categories/", {
-          headers: { "Access-Control-Allow-Origin": "*" },
+          headers: { "Access-Control-Allow-Credentials": true },
         })
         .then((res) => (this.categories = res.data))
         .catch((err) => console.log(err));
