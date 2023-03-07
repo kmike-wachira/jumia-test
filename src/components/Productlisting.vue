@@ -30,7 +30,12 @@ export default {
   methods: {
     async fetchData() {
       await axios
-        .get("http://mike.mgihub.com/api/products", { withCredentials: false })
+        .get("http://mike.mgihub.com/api/products", {
+          withCredentials: false,
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
+        })
         .then((response) => (this.productslist = response.data))
         .catch((err) => console.log(err));
     },
