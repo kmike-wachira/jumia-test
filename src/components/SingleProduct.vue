@@ -14,7 +14,7 @@
         {{ product.product_name }}
         <!-- <div class="badge badge-secondary">ksh {{ product.price }}</div> -->
       </h2>
-      <p>{{ product.product_desc }}</p>
+      <p>{{ product.product_short_desc }}</p>
       <div class="card-actions justify-center">
         <router-link
           :to="`/product/${product.id}`"
