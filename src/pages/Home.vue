@@ -77,7 +77,7 @@
       </div>
     </section>
     <!-- categories section -->
-    <category-list></category-list>
+    <category-list :categories="categories"></category-list>
     <!-- top  products -->
     <section class="z-0">
       <productlisting-vue cat_name="Top Products" />

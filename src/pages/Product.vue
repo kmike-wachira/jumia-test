@@ -18,9 +18,7 @@
               height=""
             />
           </div>
-          <div
-            class="md:7/12 lg:w-1/2 flex flex-col justify-start items-start bg-red-300 h-full"
-          >
+          <div class="md:7/12 lg:w-1/2 flex flex-col justify-start items-start h-full">
             <h2 class="text-3xl font-bold text-gray-900 md:text-4xl">
               {{ product.product_name }}
             </h2>

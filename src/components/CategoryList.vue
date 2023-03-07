@@ -7,82 +7,25 @@
     <div class="carousel rounded-box m-3">
       <div
         class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
+        v-for="(cat, index) in categories"
+        :key="cat.id"
       >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
+        <img
+          v-if="index % 2"
+          src="../assets/laptop.png"
+          width="120"
+          class="shadow-sm"
+          alt="Drink"
+        />
+        <img
+          v-else
+          src="../assets/tv1.png"
+          width="120"
+          class="shadow-sm"
+          alt="Drink"
+        />
         <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
-        </div>
-      </div>
-      <div
-        class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
-      >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
-        <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
-        </div>
-      </div>
-      <div
-        class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
-      >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
-        <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
-        </div>
-      </div>
-      <div
-        class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
-      >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
-        <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
-        </div>
-      </div>
-      <div
-        class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
-      >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
-        <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
-        </div>
-      </div>
-      <div
-        class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
-      >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
-        <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
-        </div>
-      </div>
-      <div
-        class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
-      >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
-        <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
-        </div>
-      </div>
-      <div
-        class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
-      >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
-        <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
-        </div>
-      </div>
-      <div
-        class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
-      >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
-        <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
-        </div>
-      </div>
-      <div
-        class="carousel-item flex flex-col mx-1 p-2 rounded-xl hover:shadow-xl transition-all"
-      >
-        <img src="../assets/laptop.png" width="120" class="shadow-sm" alt="Drink" />
-        <div class="text-1xl font-semibold w-full bg-gray-200 p-1 text-center">
-          Laptops
+          {{ cat.category_name }}
         </div>
       </div>
     </div>
@@ -90,7 +33,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["categories"],
+};
 </script>
 
 <style></style>
