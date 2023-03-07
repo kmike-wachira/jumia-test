@@ -216,9 +216,11 @@ export default {
       formdata.append("product_short_desc", this.product_short_desc);
       formdata.append("category_id", this.category_id);
       formdata.append("price", this.price);
-
+      console.log(formdata.values(  ));
       await axios
-        .post("https://mike.mgihub.com/api/products/", formdata)
+        .post("https://mike.mgihub.com/api/products/", formdata, {
+          headers: { "Content-Type": "multipart/form-data" },
+        })
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     },
