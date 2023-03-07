@@ -105,7 +105,7 @@ export default {
   methods: {
     async fetchCategories() {
       await axios
-        .get("http://mike.mgihub.com/api/categories")
+        .get("http://mike.mgihub.com/api/categories", { withCredentials: false })
         .then((res) => (this.categories = res.data))
         .catch((err) => console.log(err));
     },
