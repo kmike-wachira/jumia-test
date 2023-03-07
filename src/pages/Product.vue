@@ -4,7 +4,7 @@
   </div>
 
   <section>
-    <div class="flex mx-2 gap-2 z-[10] pt-2">
+    <div class="md:flex mx-2 gap-2 z-[10] pt-2">
       <div class="flex-1 m-auto text-gray-600 mt-16 card" v-if="product">
         <div
           class="space-y-6 md:flex md:gap-6 justify-center md:space-y-0 lg:items-center p-12 shadow-sm"
