@@ -204,7 +204,7 @@ export default {
     },
     async getCategories() {
       await axios
-        .get("http://mike.mgihub.com/api/categories/")
+        .get("https://mike.mgihub.com/api/categories/")
         .then((res) => (this.categories = res.data))
         .catch((err) => console.log(err));
     },
@@ -219,7 +219,7 @@ export default {
       formdata.append("price", this.price);
 
       await axios
-        .post("http://mike.mgihub.com/api/products/", formdata)
+        .post("https://mike.mgihub.com/api/products/", formdata)
         .then((res) => console.log(res))
         .catch((err) => console.log(err));
     },

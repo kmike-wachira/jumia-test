@@ -9,7 +9,7 @@ export const useProductStore = defineStore('ProductStore', {
     actions: {
         async fetchdata() {
             await axios
-                .get("http://mike.mgihub.com/api/products")
+                .get("https://mike.mgihub.com/api/products")
                 .then((res) => this.products = res.data)
                 .catch((err) => console.log(err));
         },

@@ -89,7 +89,7 @@ export default {
   methods: {
     async fetchCategories() {
       await axios
-        .get("http://mike.mgihub.com/api/categories")
+        .get("https://mike.mgihub.com/api/categories")
         .then((res) => (this.categories = res.data))
         .catch((err) => console.log(err));
     },

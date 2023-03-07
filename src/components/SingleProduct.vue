@@ -4,7 +4,7 @@
   >
     <figure>
       <img
-        :src="`http://mike.mgihub.com${product.product_image}`"
+        :src="`https://mike.mgihub.com${product.product_image}`"
         class="h-40 hover:scale-110 transition-all"
         alt="Laptop"
       />
